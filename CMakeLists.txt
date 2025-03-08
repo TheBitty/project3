@@ -12,4 +12,8 @@ add_executable(Project2 main.cpp
         includes/noServiceChargeChecking.h
         includes/highInterestSavings.h
         includes/highInterestChecking.h
-        includes/certifactionOfDepost.h)
+        includes/certificationOfDeposit.h
+        noServiceChargeChecking.cpp
+        highInterestChecking.cpp
+        highInterestSavings.cpp
+        certificateOfDeposit.cpp)

@@ -12,6 +12,20 @@ serviceChargeChecking::serviceChargeChecking() :
 
  }
 
+serviceChargeChecking::serviceChargeChecking(int accNum, double bal) {
+}
+
+serviceChargeChecking::serviceChargeChecking(const std::string &name, double bal) {
+}
+
+bool serviceChargeChecking::withdraw(double amount) {
+ return checkingAccount::withdraw(amount);
+}
+
+void serviceChargeChecking::print() const {
+ checkingAccount::print();
+}
+
 bool serviceChargeChecking::writeCheck(double amount) {
  return checkingAccount::writeCheck(amount);
 }
@@ -19,6 +33,6 @@ bool serviceChargeChecking::writeCheck(double amount) {
 void serviceChargeChecking::createMonthlyStatement() {
 }
 
-int serviceChargeChecking::getChecksWritten() const {
+auto serviceChargeChecking::getChecksWritten() const -> int {
  return checksWritten; ;
 }

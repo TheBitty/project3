@@ -12,10 +12,10 @@ private:
 
 public:
     serviceChargeChecking();
-    serviceChargeChecking(int accNum, double bal) = delete;
-    explicit serviceChargeChecking(const std::string& name, double bal = 0.0) = delete;
+    serviceChargeChecking(int accNum, double bal);
+    explicit serviceChargeChecking(const std::string& name, double bal = 0.0);
 
-    bool withdraw(double amount) override = 0;
+    bool withdraw(double amount) override;
     bool writeCheck(double amount) override;
 
     static void createMonthlyStatement();
