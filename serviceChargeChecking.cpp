@@ -18,15 +18,19 @@ serviceChargeChecking::serviceChargeChecking(int accNum, double bal) {
 serviceChargeChecking::serviceChargeChecking(const std::string &name, double bal) {
 }
 
-bool serviceChargeChecking::withdraw(double amount) {
- return checkingAccount::withdraw(amount);
+bool serviceChargeChecking::withdraw(const double amount) {
+ const bool success = checkingAccount::withdraw(amount);
+ if (success) {
+  checksWritten++;  // Note: You probably don't want to increment checks on withdrawals
+ }
+ return success;
 }
 
 void serviceChargeChecking::print() const {
  checkingAccount::print();
 }
 
-bool serviceChargeChecking::writeCheck(double amount) {
+bool serviceChargeChecking::writeCheck(const double amount) {
  return checkingAccount::writeCheck(amount);
 }
 
