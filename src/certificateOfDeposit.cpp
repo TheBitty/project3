@@ -70,11 +70,16 @@ void certificateOfDeposit::createMonthlyStatement() {
     }
 }
 
-void certificateOfDeposit::print() const {
-    bankAccount::print();
+void certificateOfDeposit::printAccountType() const {
     cout << "Account Type: Certificate of Deposit" << endl;
+}
+
+void certificateOfDeposit::printInterestRate() const {
     cout << "Interest Rate: " << fixed << setprecision(2)
          << (interestRate * 100) << "%" << endl;
+}
+
+void certificateOfDeposit::printAdditionalInfo() const {
     cout << "Term: " << maturityMonths << " months" << endl;
     cout << "Current Month: " << currentMonth << endl;
 

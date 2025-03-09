@@ -23,14 +23,13 @@ public:
 
     void createMonthlyStatement();
 
-
     // Check minimum balance
     [[nodiscard]] bool isBalanceBelowMinimum() const;
 
     [[nodiscard]] static double getMinimumBalance();
 
-    // Override print method
-    void print() const override;
+    // Print methods - useing the Template Method pattern
+    void printAdditionalInfo() const override;
 };
 
 #endif // HIGH_INTEREST_SAVINGS_H

@@ -47,8 +47,8 @@ double highInterestChecking::getHighMinimumBalance() {
     return HIGH_MIN_BALANCE;
 }
 
-void highInterestChecking::print() const {
-    noServiceChargeChecking::print();
+void highInterestChecking::printAdditionalInfo() const {
+    noServiceChargeChecking::printAdditionalInfo();
     cout << "Type: High Interest Checking" << endl;
     cout << "High Interest Rate: " << fixed << setprecision(2)
          << (HIGH_INTEREST_RATE * 100) << "%" << endl;

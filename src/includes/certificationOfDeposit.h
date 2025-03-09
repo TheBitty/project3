@@ -28,12 +28,14 @@ public:
     [[nodiscard]] int getCurrentMonth() const;
     [[nodiscard]] bool isMatured() const;
     
-    // Implementation of pure virtual functions
+    // Implementation of virtual functions
     bool withdraw(double amount) override;
     void createMonthlyStatement();
-    
-    // Override print method
-    void print() const override;
+
+    // Print methods
+    void printAccountType() const override;
+    void printInterestRate() const override;
+    void printAdditionalInfo() const override;
 };
 
 #endif // CERTIFICATE_OF_DEPOSIT_H

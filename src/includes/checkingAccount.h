@@ -1,5 +1,5 @@
 // Created by leo g on 2/21/25.
-// checkingAccount.h
+// checkingAccount.h - Abstract class for checking accounts
 #pragma once
 #ifndef CHECKING_ACCOUNT_H
 #define CHECKING_ACCOUNT_H
@@ -12,11 +12,11 @@ using namespace std;
 class checkingAccount : public bankAccount {
 private:
     double interestRate;
-    double minBalance; // for overdraft
-    double feeCharges; // for fees
+    double minBalance; // Minimum balance requirement
+    double feeCharges; // Service fee amount
 
 public:
-    // Constructors
+    // Default constructor
     checkingAccount() :
         bankAccount(),
         interestRate(0.0),
@@ -43,7 +43,7 @@ public:
     void setInterestRate(const double rate) override { interestRate = rate; }
     [[nodiscard]] double getInterestRate() const override { return interestRate; }
 
-    // Min balance methods
+    // Minimum balance methods
     void setMinBalance(const double minBal) { minBalance = minBal; }
     [[nodiscard]] double getMinBalance() const { return minBalance; }
 
@@ -71,7 +71,7 @@ public:
         }
     }
 
-    // Write the check
+    // Write a check
     virtual bool writeCheck(const double amount) {
         if (amount > 0) {
             if (getBalance() >= amount) {
@@ -101,12 +101,17 @@ public:
         return success;
     }
 
-    // Override print method
-    void print() const override {
-        bankAccount::print();
+    // Print methods - Template Method pattern implementation
+    void printAccountType() const override {
         cout << "Account Type: Checking" << endl;
+    }
+
+    void printInterestRate() const override {
         cout << "Interest Rate: " << fixed << setprecision(2)
              << (interestRate * 100) << "%" << endl;
+    }
+
+    void printAdditionalInfo() const override {
         cout << "Minimum Balance: $" << minBalance << endl;
         cout << "Service Charges: $" << feeCharges << endl;
 

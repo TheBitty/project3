@@ -34,10 +34,12 @@ public:
         return bankAccount::withdraw(amount);
     }
 
-    // print account information
-    void print() const override {
-        bankAccount::print();
+    // Print methods - Template Method pattern implementation
+    void printAccountType() const override {
         std::cout << "Account Type: Savings" << std::endl;
+    }
+
+    void printInterestRate() const override {
         std::cout << "Interest Rate: " << std::fixed << std::setprecision(2)
                   << (interestRate * 100) << "%" << std::endl;
     }

@@ -23,8 +23,9 @@ public:
     virtual void createMonthlyStatement();
 
     [[nodiscard]] bool isBalanceBelowMinimum() const override;
-    [[nodiscard]] static double getMinimumBalance() ;
+    [[nodiscard]] static double getMinimumBalance();
 
-    void print() const override;
+    // Print methods - use the Template Method pattern
+    void printAdditionalInfo() const override;
 };
 #endif // NO_SERVICE_CHARGE_CHECKING_H

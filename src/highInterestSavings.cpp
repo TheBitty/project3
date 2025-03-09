@@ -40,19 +40,15 @@ void highInterestSavings::createMonthlyStatement() {
     postInterest();
 }
 
-
 bool highInterestSavings::isBalanceBelowMinimum() const {
     return balance < MIN_BALANCE;
 }
 
 double highInterestSavings::getMinimumBalance() {
-    return MIN_BALANCE; // Using the class constant (which is 1000.0)
-    //should be always returing 1000.0
-
+    return MIN_BALANCE;
 }
 
-void highInterestSavings::print() const {
-    savingsAccount::print();
+void highInterestSavings::printAdditionalInfo() const {
     cout << "Account Type: High Interest Savings" << endl;
     cout << "Minimum Balance Requirement: $" << fixed << setprecision(2)
          << MIN_BALANCE << endl;

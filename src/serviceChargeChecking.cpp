@@ -49,8 +49,8 @@ int serviceChargeChecking::getChecksWritten() const {
     return checksWritten;
 }
 
-void serviceChargeChecking::print() const {
-    checkingAccount::print();
+void serviceChargeChecking::printAdditionalInfo() const {
+    checkingAccount::printAdditionalInfo();
     cout << "Type: Service Charge Checking" << endl;
     cout << "Fee: $" << MONTHLY_SERVICE_CHARGE << ", Checks: "
          << checksWritten << "/" << MAX_CHECKS << endl;

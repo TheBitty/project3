@@ -23,6 +23,8 @@ public:
 
     void createMonthlyStatement() const;
     [[nodiscard]] int getChecksWritten() const;
-    void print() const override;
+
+    // Print methods
+    void printAdditionalInfo() const override;
 };
 #endif // SERVICE_CHARGE_CHECKING_H

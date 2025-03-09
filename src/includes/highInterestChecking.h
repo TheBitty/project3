@@ -23,10 +23,10 @@ public:
     void createMonthlyStatement() override;
 
     // Get high minimum balance
-    [[nodiscard]] static double getHighMinimumBalance() ;
+    [[nodiscard]] static double getHighMinimumBalance();
 
-    // Override print method
-    void print() const override;
+    // Print methods - use the Template Method pattern
+    void printAdditionalInfo() const override;
 };
 
 #endif // HIGH_INTEREST_CHECKING_H

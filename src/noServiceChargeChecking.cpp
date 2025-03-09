@@ -45,11 +45,11 @@ bool noServiceChargeChecking::isBalanceBelowMinimum() const {
     return getBalance() < MIN_BALANCE;
 }
 
-double noServiceChargeChecking::getMinimumBalance() { // should be returning 500.0
+double noServiceChargeChecking::getMinimumBalance() {
     return MIN_BALANCE;
 }
 
-void noServiceChargeChecking::print() const {
-    checkingAccount::print();
+void noServiceChargeChecking::printAdditionalInfo() const {
+    checkingAccount::printAdditionalInfo();
     cout << "Type: No Service Charge Checking" << endl;
 }
