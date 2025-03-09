@@ -13,7 +13,7 @@
 
     class bankAccount {
 
-    protected: // Protected for derived classes access
+    protected:
         static int nextAccountNumber;
         int accountNumber;
         double balance;
@@ -39,7 +39,7 @@
             accountType("None"),
             interestRate(0.0) { }
 
-        // complete constructor
+        // the complete constructor
         bankAccount(string  name, string  type, const double bal = 0.0, const double rate = 0.0) :
             accountNumber(nextAccountNumber++),
             balance(bal),
@@ -85,7 +85,6 @@
             return false;
         }
 
-        // Print account information
         virtual void print() const {
             cout << "\nAccount Information:" << endl;
             cout << "Account Number: " << accountNumber << endl;
@@ -96,7 +95,5 @@
         }
     };
 
-    // Static member definition for nextAccountNumber
-    int bankAccount::nextAccountNumber = 1001;
 
     #endif // BANKACCOUNT_H

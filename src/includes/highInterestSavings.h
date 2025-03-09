@@ -18,11 +18,15 @@ public:
 
     // Override virtual functions
     bool withdraw(double amount) override;
+
     void createMonthlyStatement();
+
+    void createMonthlyStatement() const;
 
     // Check minimum balance
     [[nodiscard]] bool isBalanceBelowMinimum() const;
-    [[nodiscard]] double getMinimumBalance() const;
+
+    [[nodiscard]] static double getMinimumBalance() ;
 
     // Override print method
     void print() const override;

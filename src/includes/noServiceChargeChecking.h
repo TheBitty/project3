@@ -20,7 +20,7 @@ public:
     virtual void createMonthlyStatement();
 
     [[nodiscard]] bool isBalanceBelowMinimum() const override;
-    [[nodiscard]] double getMinimumBalance() const;
+    [[nodiscard]] static double getMinimumBalance() ;
 
     void print() const override;
 };

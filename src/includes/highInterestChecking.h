@@ -21,7 +21,7 @@ public:
     void createMonthlyStatement() override;
 
     // Get high minimum balance
-    [[nodiscard]] double getHighMinimumBalance() const;
+    [[nodiscard]] static double getHighMinimumBalance() ;
 
     // Override print method
     void print() const override;
