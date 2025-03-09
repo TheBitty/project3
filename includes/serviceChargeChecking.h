@@ -18,7 +18,7 @@ public:
     bool withdraw(double amount) override;
     bool writeCheck(double amount) override;
 
-    static void createMonthlyStatement();
+    void createMonthlyStatement() const;
     [[nodiscard]] int getChecksWritten() const;
     void print() const override;
 };
