@@ -1,6 +1,4 @@
-//
 // Created by leo g on 2/21/25.
-//
 // checkingAccount.h
 #pragma once
 #ifndef CHECKING_ACCOUNT_H

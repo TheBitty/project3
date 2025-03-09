@@ -1,4 +1,6 @@
 // highInterestChecking.h
+//
+// Created by leo g on 03/05/25.
 #pragma once
 #ifndef HIGH_INTEREST_CHECKING_H
 #define HIGH_INTEREST_CHECKING_H

@@ -1,3 +1,6 @@
+//
+// Created by leo g on 03/07/25.
+//
 #include "includes/highInterestSavings.h"
 #include <iostream>
 
@@ -44,7 +47,7 @@ bool highInterestSavings::isBalanceBelowMinimum() const {
 
 double highInterestSavings::getMinimumBalance() {
     return MIN_BALANCE; // Using the class constant (which is 1000.0)
-    //should be always returning 1000.0
+    //should be always returing 1000.0
 
 }
 

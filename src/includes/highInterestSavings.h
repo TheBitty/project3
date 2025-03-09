@@ -1,4 +1,6 @@
 // highInterestSavings.h
+//
+// Created by leo g on 03/05/25.
 #pragma once
 #ifndef HIGH_INTEREST_SAVINGS_H
 #define HIGH_INTEREST_SAVINGS_H
@@ -21,12 +23,11 @@ public:
 
     void createMonthlyStatement();
 
-    void createMonthlyStatement() const;
 
     // Check minimum balance
     [[nodiscard]] bool isBalanceBelowMinimum() const;
 
-    [[nodiscard]] static double getMinimumBalance() ;
+    [[nodiscard]] static double getMinimumBalance();
 
     // Override print method
     void print() const override;
